@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+script_dir="$(cd "$(dirname "$0")" && pwd)"
+venv_python="$script_dir/../.venv/bin/python"
+
+if [ ! -x "$venv_python" ]; then
+    echo "FAIL .venv missing; run util/init.sh"
+    exit 1
+fi
+
+exec "$venv_python" -m resume_extractor "$@"
