@@ -9,3 +9,5 @@ if [ ! -x "$venv_python" ]; then
 fi
 
 exec "$venv_python" -m resume_extractor "$@"
+exit
+$dp/git/resume_extractor.linkedin/bin/extract_resume --output $dp/git/t/docs/n_resume.pdf --email nelson.sproul@gmail.com
